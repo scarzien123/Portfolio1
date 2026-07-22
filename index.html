@@ -103,190 +103,190 @@
             text-shadow: 0 0 10px cyan;
         }
 
-            /* SLIDER */
+        /* SLIDER */
 
-            .slider {
-                margin-top: 75px;
-                width: 100%;
-                height: 550px;
-                overflow: hidden;
-                position: relative;
+        .slider {
+            margin-top: 75px;
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 15s infinite;
+        }
+
+        .slide {
+            width: 100%;
+            height: 550px;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100vw;
+            height: 550px;
+            object-fit: cover;
+            filter: brightness(.45);
+        }
+
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .caption h1 {
+            font-size: 55px;
+            color: #00ffe7;
+            text-shadow: 0 0 20px cyan;
+        }
+
+        .caption p {
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        @keyframes slide {
+
+            0%,
+            30% {
+                transform: translateX(0);
             }
 
-            .slides {
-                display: flex;
-                width: 300%;
-                animation: slide 15s infinite;
+            33%,
+            63% {
+                transform: translateX(-100vw);
             }
 
-            .slide {
-                width: 100%;
-                height: 550px;
-                position: relative;
+            66%,
+            100% {
+                transform: translateX(-200vw);
             }
 
-            .slide img {
-                width: 100vw;
-                height: 550px;
-                object-fit: cover;
-                filter: brightness(.45);
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
             }
 
-            .caption {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
+            50% {
+                background-position: 100% 50%;
             }
 
-            .caption h1 {
-                font-size: 55px;
-                color: #00ffe7;
-                text-shadow: 0 0 20px cyan;
+            100% {
+                background-position: 0% 50%;
             }
+        }
 
-            .caption p {
-                font-size: 22px;
-                margin-top: 15px;
-            }
+        /* Sections */
 
-            @keyframes slide {
+        section {
+            padding: 100px 12%;
+            background: transparent;
+        }
 
-                0%,
-                30% {
-                    transform: translateX(0);
-                }
+        h2 {
+            color: #00ffe7;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
 
-                33%,
-                63% {
-                    transform: translateX(-100vw);
-                }
+        .card {
+            background: rgba(20, 20, 30, .75);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(0, 255, 255, .35);
+            box-shadow:
+                0 0 20px rgba(0, 255, 255, .15),
+                inset 0 0 20px rgba(255, 255, 255, .03);
+        }
 
-                66%,
-                100% {
-                    transform: translateX(-200vw);
-                }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-            }
+        .skill {
+            background: rgba(25, 25, 35, .75);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: .35s;
+            border: 1px solid rgba(0, 255, 255, .2);
+        }
 
-            @keyframes gradientMove {
-                0% {
-                    background-position: 0% 50%;
-                }
+        .skill:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow:
+                0 0 25px cyan,
+                0 0 45px rgba(0, 255, 255, .4);
+        }
 
-                50% {
-                    background-position: 100% 50%;
-                }
+        .exp {
+            margin-bottom: 20px;
+        }
 
-                100% {
-                    background-position: 0% 50%;
-                }
-            }
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #111;
+            border: 1px solid cyan;
+            color: white;
+            border-radius: 10px;
+        }
 
-            /* Sections */
+        .contact button {
+            padding: 15px 40px;
+            background: cyan;
+            color: black;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-            section {
-                padding: 100px 12%;
-                background: transparent;
-            }
+        .socials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
 
-            h2 {
-                color: #00ffe7;
-                text-align: center;
-                margin-bottom: 30px;
-                font-size: 40px;
-            }
+        .socials a {
+            padding: 15px 30px;
+            text-decoration: none;
+            color: white;
+            border: 2px solid cyan;
+            border-radius: 40px;
+            transition: .3s;
+        }
 
-            .card {
-                background: rgba(20, 20, 30, .75);
-                backdrop-filter: blur(12px);
-                border-radius: 20px;
-                padding: 30px;
-                border: 1px solid rgba(0, 255, 255, .35);
-                box-shadow:
-                    0 0 20px rgba(0, 255, 255, .15),
-                    inset 0 0 20px rgba(255, 255, 255, .03);
-            }
+        .socials a:hover {
+            background: cyan;
+            color: black;
+            box-shadow: 0 0 20px cyan;
+        }
 
-            .skills {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                gap: 20px;
-            }
-
-            .skill {
-                background: rgba(25, 25, 35, .75);
-                backdrop-filter: blur(10px);
-                padding: 25px;
-                border-radius: 15px;
-                text-align: center;
-                transition: .35s;
-                border: 1px solid rgba(0, 255, 255, .2);
-            }
-
-            .skill:hover {
-                transform: translateY(-10px) scale(1.03);
-                box-shadow:
-                    0 0 25px cyan,
-                    0 0 45px rgba(0, 255, 255, .4);
-            }
-
-            .exp {
-                margin-bottom: 20px;
-            }
-
-            .contact input,
-            .contact textarea {
-                width: 100%;
-                margin-bottom: 15px;
-                padding: 15px;
-                background: #111;
-                border: 1px solid cyan;
-                color: white;
-                border-radius: 10px;
-            }
-
-            .contact button {
-                padding: 15px 40px;
-                background: cyan;
-                color: black;
-                border: none;
-                border-radius: 30px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-
-            .socials {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-                margin-top: 30px;
-            }
-
-            .socials a {
-                padding: 15px 30px;
-                text-decoration: none;
-                color: white;
-                border: 2px solid cyan;
-                border-radius: 40px;
-                transition: .3s;
-            }
-
-            .socials a:hover {
-                background: cyan;
-                color: black;
-                box-shadow: 0 0 20px cyan;
-            }
-
-            footer {
-                text-align: center;
-                padding: 30px;
-                background: rgba(0, 0, 0, .7);
-                border-top: 1px solid rgba(0, 255, 255, .2);
-                color: #bfbfbf;
-            }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, .7);
+            border-top: 1px solid rgba(0, 255, 255, .2);
+            color: #bfbfbf;
+        }
     </style>
 
 </head>
@@ -412,29 +412,29 @@
 
         <div class="about-container">
 
-    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
 
-    <div class="about-text">
-        <h3>Hello, I'm Romeo Piolo</h3>
+            <div class="about-text">
+                <h3>Hello, I'm Romeo Piolo</h3>
 
-        <p> 
-            I'm a passionate web developer who enjoys creating modern,
-            responsive, and gaming-inspired websites. I love learning new
-            technologies, designing attractive user interfaces, and building
-            projects that provide great user experiences.
-        </p>
+                <p>
+                    I'm a passionate web developer who enjoys creating modern,
+                    responsive, and gaming-inspired websites. I love learning new
+                    technologies, designing attractive user interfaces, and building
+                    projects that provide great user experiences.
+                </p>
 
-        <div class="socials">
-            <a href="mailto:romeopiolo22@gmail.com">Gmail</a>
-            <a href="https://www.facebook.com/romeo.piolo.R" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/iluvscarz/" target="_blank">Instagram</a>
-            <a href="https://discord.com/users/961854715694555217" target="_blank">Discord</a>
-            <a href="https://github.com/scarzien123" target="_blank">GitHub</a>
+                <div class="socials">
+                    <a href="mailto:romeopiolo22@gmail.com">Gmail</a>
+                    <a href="https://www.facebook.com/romeo.piolo.R" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/iluvscarz/" target="_blank">Instagram</a>
+                    <a href="https://discord.com/users/961854715694555217" target="_blank">Discord</a>
+                    <a href="https://github.com/scarzien123" target="_blank">GitHub</a>
+                </div>
+
+            </div>
+
         </div>
-
-    </div>
-
-</div>
 
     </section>
 
@@ -446,16 +446,23 @@
 
         <div class="card contact">
 
-            <input type="text" placeholder="Your Name">
+            <form action="mail.php" method="POST" onsubmit="return confirmSend()" >
+            
+                <input type="text" name="name" placeholder="Your Name" required>
 
-            <input type="email" placeholder="Email">
+                <input type="email" name="email" placeholder="Your Email" required>
 
-            <textarea rows="6" placeholder="Your Message"></textarea>
+                <input type="text" name="subject" placeholder="Subject" required>
 
-            <button>Send Message</button>
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+                <button type="submit" name="send">
+                    Send Message
+                </button>
+
+            </form>
 
         </div>
-
     </section>
 
     <footer>
@@ -505,6 +512,19 @@
                 }
             });
         });
+
+        function confirmSend() {
+            alert("Sending message...");
+            return true;
+        }
+
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+
+            if (params.get("success") === "1") {
+                alert("✅ The message has been sent!");
+            }
+        };
     </script>
 
 </body>
